@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="Polly Pan">
+    <meta property="og:url" content="https://pollypan.com/work/kkbox-help-center.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://pollypan.com/dist/images/work/helpcenter/cover.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pollypan.com/work/kkbox-help-center.html">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <!-- <meta name="twitter:image" content="https://pollypan.com/dist/images/work/helpcenter/cover.png"> -->
+    <link rel="shortcut icon" href="/dist/images/32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/dist/images/256.png">
+    <link rel="stylesheet" href="/dist/css/vendor.min.css">
+    <link rel="stylesheet" href="/dist/css/assignment.min.css">
+  </head>
+
+  <body class="assignmentLINETravel">
+    <div class="app-wrapper">
+      <header class="header-journey d-flex align-items-center text-light">
+        <div class="container">
+          <div class="header-journey__destination">{{ destination }}</div>
+          <div class="header-journey__title">{{ title }}</div>
+          <div class="header-journey__duration">{{ duration }}</div>
+          <div class="header-journey__members">
+            <img class="header-journey__members__avatar rounded-circle" :src="avatar_1" alt="user profile image">
+            <img class="header-journey__members__avatar rounded-circle" :src="avatar_2" alt="user profile image">
+            <img class="header-journey__members__avatar rounded-circle" :src="avatar_3" alt="user profile image">
+          </div>
+
+        </div>
+      </header>
+      <main class="timeline-journey" style="height: 2000px;">
+        <div class="timeline-journey__picker-group bg-light">
+          <div class="container">
+            <div class="timeline-journey__picker">
+              <a class="btn btn-sm btn-picker btn-picker--active" href="#summary1">Day 1</a>
+              <a class="btn btn-sm btn-picker btn-picker--initial" href="#summary2">Day 2</a>
+              <a class="btn btn-sm btn-picker btn-picker--initial" href="">Day 3</a>
+              <a class="btn btn-sm btn-picker btn-picker--initial" href="">Day 4</a>
+              <a class="btn btn-sm btn-picker btn-picker--initial" href="">Day 5</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- title -->
+        <div id="summary1" class="summary cell cell__date">
+          <div class="container d-flex justify-content-between align-items-center">
+            <div><span class="cell__date__index">Day 1</span>12.29 (SUN)</div>
+            <button class="btn-xs btn-settings btn-settings__edit"><span class="btn-text"><i class="fas fa-sort"></i> Edit</span></button>
+          </div>
+        </div>
+
+        <!-- map -->
+        <div id="map" class="d-flex justify-content-center">
+          <button class="btn-xs btn-settings btn-settings__edit"><span class="btn-text"><i class="fas fa-sort"></i> Expand Map</span></button>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.282856495915!2d127.10301891495737!3d37.359483479837145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59ca12ef81c7%3A0xff4c41964ad30e92!2s6+Buljeong-ro%2C+Jeongja-dong%2C+Bundang-gu%2C+Seongnam-si%2C+Gyeonggi-do%2C+South+Korea!5e0!3m2!1sen!2stw!4v1552556936432" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <!-- schedule -->
+        <div class="timeline-journey__spot-group timeline-journey__spot-group__day1">
+          <div class="container">
+            <div class="timeline-journey__spot card-shedule" v-for="item in items">
+              <!-- <edit-schedule></edit-schedule> -->
+              <div class="timeline-journey__spot__edit-panel">
+                <div class="d-flex justify-content-end align-items-center">
+                  <i class="fas fa-sort"></i>
+                </div>
+              </div>
+              <div class="timeline-journey__spot__title">{{ item.spot }}</div>
+              <div class="timeline-journey__spot__location text-truncate">{{ item.location }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- title -->
+        <div id="summary2" class="summary cell cell__date">
+          <div class="container d-flex justify-content-between align-items-center">
+            <div><span class="cell__date__index">Day 2</span>12.30 (MON)</div>
+            <button class="btn-xs btn-settings btn-settings__edit"><span class="btn-text"><i class="fas fa-sort"></i> Edit</span></button>
+          </div>
+        </div>
+
+        <!-- map -->
+        <div id="map" class="d-flex justify-content-center">
+          <button class="btn-xs btn-settings btn-settings__edit"><span class="btn-text"><i class="fas fa-sort"></i> Expand Map</span></button>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.282856495915!2d127.10301891495737!3d37.359483479837145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59ca12ef81c7%3A0xff4c41964ad30e92!2s6+Buljeong-ro%2C+Jeongja-dong%2C+Bundang-gu%2C+Seongnam-si%2C+Gyeonggi-do%2C+South+Korea!5e0!3m2!1sen!2stw!4v1552556936432" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <!-- schedule -->
+        <div class="timeline-journey__spot-group timeline-journey__spot-group__day2">
+          <div class="container">
+            <div class="timeline-journey__spot card-shedule" v-for="item in items">
+              <!-- <edit-schedule></edit-schedule> -->
+              <!-- <div class="edit-panel">哈哈哈</div> -->
+              <div class="timeline-journey__spot__title">{{ item.spot }}</div>
+              <div class="timeline-journey__spot__location text-truncate">{{ item.location }}</div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="footer"></div>
+    </div>
+    <script src="/dist/js/vendor.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/dist/js/assignment.js"></script>
+    <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+    <!-- <script src="/dist/js/common.min.js"></script> -->
+    <!-- <script src="/dist/js/detailpage.min.js"></script> -->
+  </body>
+</html>
