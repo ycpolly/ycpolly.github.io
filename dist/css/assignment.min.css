@@ -7284,6 +7284,8 @@ button:focus {
       color: #21d584;
       background: #fff;
       border-color: #21d584; }
+.timeline-journey__spot-group {
+  padding: 2rem 0; }
 .timeline-journey__spot {
   position: relative;
   width: calc(100% - 25px);
@@ -7316,11 +7318,11 @@ button:focus {
   .timeline-journey__spot::after {
     content: "";
     position: absolute;
-    top: -1px;
+    top: -50px;
     left: -20px;
     z-index: -1;
     width: 2px;
-    height: calc(100% + 20px);
+    height: calc(100% + 100px);
     background: #e5e5e5; }
   .timeline-journey__spot__edit-panel {
     position: absolute;
