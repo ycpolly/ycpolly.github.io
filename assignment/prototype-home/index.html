@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PDDBN99');</script>
+        <!-- End Google Tag Manager -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,9 +38,12 @@
     </head>
 
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDDBN99" width="0" height="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <main></main>
         <script src="build/standalone.js"></script>
-        
+
         <script id="build_index_js">
         (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -250,7 +259,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
 /******/ });
 });
         </script>
-        
+
         <script>
         const data = {
   "presentationNode": {
@@ -2059,7 +2068,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
 };
         const $build_index_js = document.querySelector("#build_index_js")
         const script = $build_index_js ? $build_index_js.textContent.trim() : ""
-        
+
         // need react to have rendered, before we can do setPreviewData
         setTimeout(() => {
             if (script.length > 0) {
