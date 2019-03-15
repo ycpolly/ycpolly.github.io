@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <script src="build/react.development.js"></script>
+        <script src="build/react-dom.development.js"></script>
+        <script src="build/framer.js"></script>
+
+        <link href="build/Draft.css" rel="stylesheet" />
+        <link href="build/style.css" rel="stylesheet" />
+
+        <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+        <style>
+            @font-face {
+                font-family: "Roboto Mono";
+                font-style: normal;
+                font-weight: 400;
+                src: local("Roboto Mono"), local("RobotoMono-Regular"),
+                    url("fonts/RobotoMono-Regular.ttf") format("truetype");
+            }
+        </style>
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main></main>
+        <script src="build/standalone.js"></script>
+        
+        <script id="build_index_js">
+        (function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("framer"));
+	else if(typeof define === 'function' && define.amd)
+		define(["framer"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("framer")) : factory(root["Framer"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE_framer__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		try { modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); } catch (error) { module.exports = { error } }
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// asset url
+/******/ 	var __module_i = eval("typeof module !== 'undefined' ? module.i : ''");
+/******/ 	var __framer_package = (/(node_modules[/].*)[/](build|dist).index.js/.exec(__module_i) || [])[1]
+/******/ 	function __asset_url__(src) { return __WEBPACK_EXTERNAL_MODULE_framer__.serverURL(__framer_package, src) };
+/******/ 	installedModules['framer/resource'] = { i: 'framer/resource', l: true, exports: { url: __asset_url__ } };
+/******/
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./package.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./code sync recursive \\.(t|j)s(x?)|\\.css$":
+/*!***************************************!*\
+  !*** ./code sync \.(t|j)s(x?)|\.css$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./canvas.tsx": "./code/canvas.tsx"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./code sync recursive \\.(t|j)s(x?)|\\.css$";
+
+/***/ }),
+
+/***/ "./code/canvas.tsx":
+/*!*************************!*\
+  !*** ./code/canvas.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// WARNING: this file is auto generated, any changes will be lost
+const framer_1 = __webpack_require__(/*! framer */ "framer");
+const canvas = framer_1.CanvasStore.shared({"children":[]});
+
+
+/***/ }),
+
+/***/ "./package.js":
+/*!********************!*\
+  !*** ./package.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// The template for the dynamic webpack entry. Be aware of the variables
+
+const packageJson = __webpack_require__(/*! ./package.json */ "./package.json")
+
+const package = {
+    packageJson,
+    sourceModules: {},
+    dependencies: {},
+}
+
+// This is a special webpack thing that watches the whole directory
+// https://github.com/webpack/docs/wiki/context
+const ctx = __webpack_require__("./code sync recursive \\.(t|j)s(x?)|\\.css$")
+
+ctx.keys().forEach(key => {
+    package.sourceModules[key] = () => ctx(key)
+})
+
+// The packages are passed in through a template
+const packages = {}
+
+                packages["framer"] = () => {
+                    var package = {}
+                    try {
+                        package = __webpack_require__(/*! framer */ "framer")
+                    } catch (e) {
+                        console.log(e)
+                    }
+                    package.__framer__ = package.__framer__ || {}
+                    package.__framer__.packageJson = {"name":"framer","version":"0.10.10","main":"build/framer.js","author":"Framer","license":"MIT","scripts":{"coverage":"jest --config jest.json --coverage","test":"jest --config jest.json","watch":"jest --config jest.json --watch"},"devDependencies":{"@microsoft/api-documenter":"^1.5.47","@microsoft/api-extractor":"^7","@types/chalk":"^2.2.0","@types/draft-js":"0.10.19","@types/enzyme":"^3.1.10","@types/enzyme-adapter-react-16":"^1.0.3","@types/hsluv":"https://github.com/framer/typed_hsluv#bump","@types/jest":"^23.0.0","@types/jest-diff":"^20.0.0","@types/jest-matcher-utils":"^21.0.1","@types/node":"^9.6.0","@types/react":"^16","@types/react-dom":"^16","cache-loader":"^1.2.2","chalk":"^2.4.1","convert-tsconfig-paths-to-webpack-aliases":"^0.9.2","css.escape":"^1.5.1","draft-js":"0.10.4","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","eventemitter3":"^3.1.0","fork-ts-checker-webpack-plugin":"^0.4.1","hoist-non-react-statics":"^2.5.0","hsluv":"^0.0.3","immutable":"^3.8.2","jest":"^23.1.0","jest-diff":"^23.6.0","jest-junit":"^5.2.0","progress-bar-webpack-plugin":"^1.11.0","raf":"^3.4.0","react":"~16.4","react-dev-utils":"^5.0.1","react-dom":"~16.4","semver":"^5.6.0","ts-jest":"^23.10.5","ts-loader":"^4.1.0","typescript":"^3.0.1","watch":"^1.0.2","webpack":"^4.4.1","webpack-cli":"^3.1.2","webpack-dev-server":"^3.1.10","xcssmatrix":"^0.2.2"},"peerDependencies":{"react":"^16.3","react-dom":"^16.3"},"tsdoc":{"tsdocFlavor":"AEDoc"},"framer":{"components":[{"name":"Scroll","children":true,"properties":[{"key":"direction","title":"Direction","kind":"enum","options":["horizontal","vertical","both"]}]},{"name":"Page"},{"name":"Stack"},{"name":"FramerAppleWatch38","type":"device"},{"name":"FramerAppleWatch42","type":"device"},{"name":"FramerSonySmartWatch","type":"device"},{"name":"FramerAppleIPhoneSE","type":"device"},{"name":"FramerAppleIPhone8","type":"device"},{"name":"FramerAppleIPhone8Plus","type":"device"},{"name":"FramerAppleIPhoneXS","type":"device"},{"name":"FramerAppleIPhoneXR","type":"device"},{"name":"FramerAppleIPhoneXSMax","type":"device"},{"name":"FramerGooglePixel2","type":"device"},{"name":"FramerGooglePixel2XL","type":"device"},{"name":"FramerGooglePixel3","type":"device"},{"name":"FramerGooglePixel3XL","type":"device"},{"name":"FramerSamsungNote5","type":"device"},{"name":"FramerSamsungGalaxyS9","type":"device"},{"name":"FramerAppleIPadAir","type":"device"},{"name":"FramerAppleIPadMini","type":"device"},{"name":"FramerAppleIPadPro","type":"device"},{"name":"FramerGoogleNexusTablet","type":"device"},{"name":"FramerMicrosoftSurfacePro3","type":"device"},{"name":"FramerMicrosoftSurfacePro4","type":"device"},{"name":"FramerAppleIMac","type":"device"},{"name":"FramerAppleThunderboltDisplay","type":"device"},{"name":"FramerAppleMacBook","type":"device"},{"name":"FramerAppleMacBookAir","type":"device"},{"name":"FramerAppleMacBookPro","type":"device"},{"name":"FramerDellXPS","type":"device"},{"name":"FramerMicrosoftSurfaceBook","type":"device"},{"name":"FramerSonyW850C","type":"device"},{"name":"FramerStoreArtwork","type":"device"},{"name":"FramerStoreIcon","type":"device"}]}}
+                    return package
+                }
+
+package.dependencies = packages
+
+exports.__framer__ = package
+
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: main, license, devDependencies, peerDependencies, framer, author, default */
+/***/ (function(module) {
+
+module.exports = {"main":"dist/index.js","license":"MIT","devDependencies":{"@types/react":"^16.4.16"},"peerDependencies":{"framer":"^0.10","react":"^16.3.0","react-dom":"^16.3.0"},"framer":{"id":"b3b967d3-c96e-43f0-a1ea-c2ee7e4bd7d9"},"author":"Polly Pan"};
+
+/***/ }),
+
+/***/ "framer":
+/*!******************************************************************************************!*\
+  !*** external {"root":"Framer","commonjs2":"framer","commonjs":"framer","amd":"framer"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
+
+/***/ })
+
+/******/ });
+});
+        </script>
+        
+        <script>
+        const data = {
+  "presentationNode": {
+    "componentClass": "Frame",
+    "props": {
+      "key": "iVYn4E2cH",
+      "id": "id_iVYn4E2cH",
+      "willChangeTransform": false,
+      "opacity": 1,
+      "radius": 0,
+      "rotation": 0,
+      "visible": true,
+      "overflow": "hidden",
+      "background": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 1,
+        "h": 0,
+        "s": 0,
+        "l": 1,
+        "initialValue": "rgba(255,255,255,1)",
+        "roundA": 1,
+        "format": "rgb"
+      },
+      "left": 0,
+      "right": null,
+      "top": 0,
+      "bottom": null,
+      "width": 375,
+      "height": 667,
+      "aspectRatio": null,
+      "centerX": "0%",
+      "centerY": "0%",
+      "parentSize": null
+    },
+    "children": [
+      {
+        "componentClass": "ComponentContainer",
+        "props": {
+          "key": "NLm0HUehv",
+          "id": "id_NLm0HUehv",
+          "willChangeTransform": false,
+          "rotation": 0,
+          "opacity": 1,
+          "componentIdentifier": "framer/Scroll",
+          "visible": true,
+          "left": 0,
+          "right": 0,
+          "top": 44,
+          "bottom": 0,
+          "width": 375,
+          "height": 623,
+          "aspectRatio": null,
+          "centerX": "50%",
+          "centerY": "53.2983508245877%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "framer/Scroll",
+            "props": {
+              "overflow": "hidden",
+              "opacity": 1,
+              "radius": 0,
+              "background": null,
+              "direction": "vertical",
+              "directionLock": true,
+              "placeholders": null,
+              "__slotKeys": [
+                "children"
+              ],
+              "children": [
+                {
+                  "componentClass": "Frame",
+                  "props": {
+                    "key": "ED0KHpt8i",
+                    "id": "id_ED0KHpt8i",
+                    "willChangeTransform": false,
+                    "opacity": 1,
+                    "radius": 0,
+                    "rotation": 0,
+                    "visible": true,
+                    "overflow": "visible",
+                    "background": {
+                      "src": "MWndCi5C6rPUcB4ufnQbEBtMDKk.png",
+                      "pixelWidth": 750,
+                      "pixelHeight": 4600,
+                      "intrinsicWidth": 375,
+                      "intrinsicHeight": 2300,
+                      "fit": "fill"
+                    },
+                    "left": 475,
+                    "right": null,
+                    "top": 0,
+                    "bottom": null,
+                    "width": 375,
+                    "height": 2300,
+                    "aspectRatio": 0.16304347826086957,
+                    "centerX": "0%",
+                    "centerY": "0%",
+                    "parentSize": null
+                  },
+                  "children": [
+                    {
+                      "componentClass": "ComponentContainer",
+                      "props": {
+                        "key": "flxOd6A0Z",
+                        "id": "id_flxOd6A0Z",
+                        "willChangeTransform": false,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "componentIdentifier": "framer/Page",
+                        "visible": true,
+                        "left": 0,
+                        "right": 0,
+                        "top": 502,
+                        "bottom": null,
+                        "width": 375,
+                        "height": 172,
+                        "aspectRatio": null,
+                        "centerX": "50%",
+                        "centerY": "25.565217391304344%",
+                        "parentSize": null
+                      },
+                      "children": [
+                        {
+                          "componentClass": "framer/Page",
+                          "props": {
+                            "overflow": "hidden",
+                            "opacity": 1,
+                            "radius": 0,
+                            "background": null,
+                            "direction": "horizontal",
+                            "contentWidth": "auto",
+                            "contentHeight": "auto",
+                            "alignment": "start",
+                            "gap": 7,
+                            "padding": 0,
+                            "paddingPerSide": false,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "currentPage": 0,
+                            "momentum": false,
+                            "draggingEnabled": true,
+                            "defaultEffect": "none",
+                            "placeholders": null,
+                            "__slotKeys": [
+                              "children"
+                            ],
+                            "children": [
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "pbSVWadNX",
+                                  "id": "id_pbSVWadNX",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "hidden",
+                                  "background": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255,
+                                    "a": 1,
+                                    "h": 0,
+                                    "s": 0,
+                                    "l": 1,
+                                    "initialValue": "white",
+                                    "roundA": 1,
+                                    "format": "rgb"
+                                  },
+                                  "left": 950,
+                                  "right": null,
+                                  "top": 502,
+                                  "bottom": null,
+                                  "width": 18,
+                                  "height": 172,
+                                  "aspectRatio": null,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "o6_hgryoy",
+                                  "id": "id_o6_hgryoy",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "lVX29PMXMcqV7N0ns2TkSBYHUgA.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 344,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 172,
+                                    "fit": "fill"
+                                  },
+                                  "left": 975,
+                                  "right": null,
+                                  "top": 502,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 172,
+                                  "aspectRatio": 1.627906976744186,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "gtQxklu9f",
+                                  "id": "id_gtQxklu9f",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "r8jrLH2lI8uS9AlLjMLnZ6mNxXM.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 344,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 172,
+                                    "fit": "fill"
+                                  },
+                                  "left": 1262,
+                                  "right": null,
+                                  "top": 502,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 172,
+                                  "aspectRatio": 1.627906976744186,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "rIqaEb9r9",
+                                  "id": "id_rIqaEb9r9",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "nL3gUY95Fr10YkgCm6wniqp5Pk.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 344,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 172,
+                                    "fit": "fill"
+                                  },
+                                  "left": 1549,
+                                  "right": null,
+                                  "top": 502,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 172,
+                                  "aspectRatio": 1.627906976744186,
+                                  "centerX": "76.78571428571429%",
+                                  "centerY": "50%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              }
+                            ],
+                            "id": "flxOd6A0Zframer/Page",
+                            "key": "flxOd6A0Zframer/Page"
+                          },
+                          "children": [
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "pbSVWadNX",
+                                "id": "id_pbSVWadNX",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "hidden",
+                                "background": {
+                                  "r": 255,
+                                  "g": 255,
+                                  "b": 255,
+                                  "a": 1,
+                                  "h": 0,
+                                  "s": 0,
+                                  "l": 1,
+                                  "initialValue": "white",
+                                  "roundA": 1,
+                                  "format": "rgb"
+                                },
+                                "left": 950,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 18,
+                                "height": 172,
+                                "aspectRatio": null,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "o6_hgryoy",
+                                "id": "id_o6_hgryoy",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "lVX29PMXMcqV7N0ns2TkSBYHUgA.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 975,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "gtQxklu9f",
+                                "id": "id_gtQxklu9f",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "r8jrLH2lI8uS9AlLjMLnZ6mNxXM.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 1262,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "rIqaEb9r9",
+                                "id": "id_rIqaEb9r9",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "nL3gUY95Fr10YkgCm6wniqp5Pk.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 1549,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "76.78571428571429%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "componentClass": "ComponentContainer",
+                      "props": {
+                        "key": "vNoLIhdLz",
+                        "id": "id_vNoLIhdLz",
+                        "willChangeTransform": false,
+                        "rotation": 0,
+                        "opacity": 1,
+                        "componentIdentifier": "framer/Page",
+                        "visible": true,
+                        "left": 0,
+                        "right": 0,
+                        "top": 940,
+                        "bottom": null,
+                        "width": 375,
+                        "height": 200,
+                        "aspectRatio": null,
+                        "centerX": "50%",
+                        "centerY": "45.6%",
+                        "parentSize": null
+                      },
+                      "children": [
+                        {
+                          "componentClass": "framer/Page",
+                          "props": {
+                            "overflow": "hidden",
+                            "opacity": 1,
+                            "radius": 0,
+                            "background": null,
+                            "direction": "horizontal",
+                            "contentWidth": "auto",
+                            "contentHeight": "auto",
+                            "alignment": "start",
+                            "gap": 7,
+                            "padding": 0,
+                            "paddingPerSide": false,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "currentPage": 0,
+                            "momentum": false,
+                            "draggingEnabled": true,
+                            "defaultEffect": "none",
+                            "placeholders": null,
+                            "__slotKeys": [
+                              "children"
+                            ],
+                            "children": [
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "evQJ74lXU",
+                                  "id": "id_evQJ74lXU",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "hidden",
+                                  "background": {
+                                    "r": 255,
+                                    "g": 255,
+                                    "b": 255,
+                                    "a": 1,
+                                    "h": 0,
+                                    "s": 0,
+                                    "l": 1,
+                                    "initialValue": "white",
+                                    "roundA": 1,
+                                    "format": "rgb"
+                                  },
+                                  "left": 950,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 18,
+                                  "height": 200,
+                                  "aspectRatio": null,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "OXACw8y0k",
+                                  "id": "id_OXACw8y0k",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "yUWFoVYtn4QlzEYrgByxDLPBjC0.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 400,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 200,
+                                    "fit": "fill"
+                                  },
+                                  "left": 975,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 200,
+                                  "aspectRatio": 1.4,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "Crq__9fPN",
+                                  "id": "id_Crq__9fPN",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "NOprsKcL2ISrkb3Jk6ffXzGUc4c.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 400,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 200,
+                                    "fit": "fill"
+                                  },
+                                  "left": 1262,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 200,
+                                  "aspectRatio": 1.4,
+                                  "centerX": "0%",
+                                  "centerY": "0%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "Rseo8gleJ",
+                                  "id": "id_Rseo8gleJ",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "7igGzOv2wPQmPMA0KhLP2Pm5U2I.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 400,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 200,
+                                    "fit": "fill"
+                                  },
+                                  "left": 1549,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 200,
+                                  "aspectRatio": 1.4,
+                                  "centerX": "84.64285714285714%",
+                                  "centerY": "50%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "H8ZjTOEEb",
+                                  "id": "id_H8ZjTOEEb",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "DGXUck4UEjT759h4uFb2W7fD9M.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 400,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 200,
+                                    "fit": "fill"
+                                  },
+                                  "left": 1836,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 200,
+                                  "aspectRatio": 1.4,
+                                  "centerX": "102.85714285714285%",
+                                  "centerY": "50%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              },
+                              {
+                                "componentClass": "Frame",
+                                "props": {
+                                  "key": "Rf7iprtIs",
+                                  "id": "id_Rf7iprtIs",
+                                  "willChangeTransform": false,
+                                  "opacity": 1,
+                                  "radius": 0,
+                                  "rotation": 0,
+                                  "visible": true,
+                                  "overflow": "visible",
+                                  "background": {
+                                    "src": "0P2OztyWoIx6tN0J2m92cJumM.png",
+                                    "pixelWidth": 560,
+                                    "pixelHeight": 400,
+                                    "intrinsicWidth": 280,
+                                    "intrinsicHeight": 200,
+                                    "fit": "fill"
+                                  },
+                                  "left": 2123,
+                                  "right": null,
+                                  "top": 940,
+                                  "bottom": null,
+                                  "width": 280,
+                                  "height": 200,
+                                  "aspectRatio": 1.4,
+                                  "centerX": "58.57142857142858%",
+                                  "centerY": "50%",
+                                  "parentSize": null
+                                },
+                                "children": []
+                              }
+                            ],
+                            "id": "vNoLIhdLzframer/Page",
+                            "key": "vNoLIhdLzframer/Page"
+                          },
+                          "children": [
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "evQJ74lXU",
+                                "id": "id_evQJ74lXU",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "hidden",
+                                "background": {
+                                  "r": 255,
+                                  "g": 255,
+                                  "b": 255,
+                                  "a": 1,
+                                  "h": 0,
+                                  "s": 0,
+                                  "l": 1,
+                                  "initialValue": "white",
+                                  "roundA": 1,
+                                  "format": "rgb"
+                                },
+                                "left": 950,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 18,
+                                "height": 200,
+                                "aspectRatio": null,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "OXACw8y0k",
+                                "id": "id_OXACw8y0k",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "yUWFoVYtn4QlzEYrgByxDLPBjC0.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 975,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Crq__9fPN",
+                                "id": "id_Crq__9fPN",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "NOprsKcL2ISrkb3Jk6ffXzGUc4c.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1262,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Rseo8gleJ",
+                                "id": "id_Rseo8gleJ",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "7igGzOv2wPQmPMA0KhLP2Pm5U2I.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1549,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "84.64285714285714%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "H8ZjTOEEb",
+                                "id": "id_H8ZjTOEEb",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "DGXUck4UEjT759h4uFb2W7fD9M.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1836,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "102.85714285714285%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Rf7iprtIs",
+                                "id": "id_Rf7iprtIs",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "0P2OztyWoIx6tN0J2m92cJumM.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 2123,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "58.57142857142858%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "id": "NLm0HUehvframer/Scroll",
+              "key": "NLm0HUehvframer/Scroll"
+            },
+            "children": [
+              {
+                "componentClass": "Frame",
+                "props": {
+                  "key": "ED0KHpt8i",
+                  "id": "id_ED0KHpt8i",
+                  "willChangeTransform": false,
+                  "opacity": 1,
+                  "radius": 0,
+                  "rotation": 0,
+                  "visible": true,
+                  "overflow": "visible",
+                  "background": {
+                    "src": "MWndCi5C6rPUcB4ufnQbEBtMDKk.png",
+                    "pixelWidth": 750,
+                    "pixelHeight": 4600,
+                    "intrinsicWidth": 375,
+                    "intrinsicHeight": 2300,
+                    "fit": "fill"
+                  },
+                  "left": 475,
+                  "right": null,
+                  "top": 0,
+                  "bottom": null,
+                  "width": 375,
+                  "height": 2300,
+                  "aspectRatio": 0.16304347826086957,
+                  "centerX": "0%",
+                  "centerY": "0%",
+                  "parentSize": null
+                },
+                "children": [
+                  {
+                    "componentClass": "ComponentContainer",
+                    "props": {
+                      "key": "flxOd6A0Z",
+                      "id": "id_flxOd6A0Z",
+                      "willChangeTransform": false,
+                      "rotation": 0,
+                      "opacity": 1,
+                      "componentIdentifier": "framer/Page",
+                      "visible": true,
+                      "left": 0,
+                      "right": 0,
+                      "top": 502,
+                      "bottom": null,
+                      "width": 375,
+                      "height": 172,
+                      "aspectRatio": null,
+                      "centerX": "50%",
+                      "centerY": "25.565217391304344%",
+                      "parentSize": null
+                    },
+                    "children": [
+                      {
+                        "componentClass": "framer/Page",
+                        "props": {
+                          "overflow": "hidden",
+                          "opacity": 1,
+                          "radius": 0,
+                          "background": null,
+                          "direction": "horizontal",
+                          "contentWidth": "auto",
+                          "contentHeight": "auto",
+                          "alignment": "start",
+                          "gap": 7,
+                          "padding": 0,
+                          "paddingPerSide": false,
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "currentPage": 0,
+                          "momentum": false,
+                          "draggingEnabled": true,
+                          "defaultEffect": "none",
+                          "placeholders": null,
+                          "__slotKeys": [
+                            "children"
+                          ],
+                          "children": [
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "pbSVWadNX",
+                                "id": "id_pbSVWadNX",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "hidden",
+                                "background": {
+                                  "r": 255,
+                                  "g": 255,
+                                  "b": 255,
+                                  "a": 1,
+                                  "h": 0,
+                                  "s": 0,
+                                  "l": 1,
+                                  "initialValue": "white",
+                                  "roundA": 1,
+                                  "format": "rgb"
+                                },
+                                "left": 950,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 18,
+                                "height": 172,
+                                "aspectRatio": null,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "o6_hgryoy",
+                                "id": "id_o6_hgryoy",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "lVX29PMXMcqV7N0ns2TkSBYHUgA.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 975,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "gtQxklu9f",
+                                "id": "id_gtQxklu9f",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "r8jrLH2lI8uS9AlLjMLnZ6mNxXM.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 1262,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "rIqaEb9r9",
+                                "id": "id_rIqaEb9r9",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "nL3gUY95Fr10YkgCm6wniqp5Pk.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 344,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 172,
+                                  "fit": "fill"
+                                },
+                                "left": 1549,
+                                "right": null,
+                                "top": 502,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 172,
+                                "aspectRatio": 1.627906976744186,
+                                "centerX": "76.78571428571429%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            }
+                          ],
+                          "id": "flxOd6A0Zframer/Page",
+                          "key": "flxOd6A0Zframer/Page"
+                        },
+                        "children": [
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "pbSVWadNX",
+                              "id": "id_pbSVWadNX",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "hidden",
+                              "background": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255,
+                                "a": 1,
+                                "h": 0,
+                                "s": 0,
+                                "l": 1,
+                                "initialValue": "white",
+                                "roundA": 1,
+                                "format": "rgb"
+                              },
+                              "left": 950,
+                              "right": null,
+                              "top": 502,
+                              "bottom": null,
+                              "width": 18,
+                              "height": 172,
+                              "aspectRatio": null,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "o6_hgryoy",
+                              "id": "id_o6_hgryoy",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "lVX29PMXMcqV7N0ns2TkSBYHUgA.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 344,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 172,
+                                "fit": "fill"
+                              },
+                              "left": 975,
+                              "right": null,
+                              "top": 502,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 172,
+                              "aspectRatio": 1.627906976744186,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "gtQxklu9f",
+                              "id": "id_gtQxklu9f",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "r8jrLH2lI8uS9AlLjMLnZ6mNxXM.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 344,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 172,
+                                "fit": "fill"
+                              },
+                              "left": 1262,
+                              "right": null,
+                              "top": 502,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 172,
+                              "aspectRatio": 1.627906976744186,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "rIqaEb9r9",
+                              "id": "id_rIqaEb9r9",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "nL3gUY95Fr10YkgCm6wniqp5Pk.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 344,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 172,
+                                "fit": "fill"
+                              },
+                              "left": 1549,
+                              "right": null,
+                              "top": 502,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 172,
+                              "aspectRatio": 1.627906976744186,
+                              "centerX": "76.78571428571429%",
+                              "centerY": "50%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "componentClass": "ComponentContainer",
+                    "props": {
+                      "key": "vNoLIhdLz",
+                      "id": "id_vNoLIhdLz",
+                      "willChangeTransform": false,
+                      "rotation": 0,
+                      "opacity": 1,
+                      "componentIdentifier": "framer/Page",
+                      "visible": true,
+                      "left": 0,
+                      "right": 0,
+                      "top": 940,
+                      "bottom": null,
+                      "width": 375,
+                      "height": 200,
+                      "aspectRatio": null,
+                      "centerX": "50%",
+                      "centerY": "45.6%",
+                      "parentSize": null
+                    },
+                    "children": [
+                      {
+                        "componentClass": "framer/Page",
+                        "props": {
+                          "overflow": "hidden",
+                          "opacity": 1,
+                          "radius": 0,
+                          "background": null,
+                          "direction": "horizontal",
+                          "contentWidth": "auto",
+                          "contentHeight": "auto",
+                          "alignment": "start",
+                          "gap": 7,
+                          "padding": 0,
+                          "paddingPerSide": false,
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "currentPage": 0,
+                          "momentum": false,
+                          "draggingEnabled": true,
+                          "defaultEffect": "none",
+                          "placeholders": null,
+                          "__slotKeys": [
+                            "children"
+                          ],
+                          "children": [
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "evQJ74lXU",
+                                "id": "id_evQJ74lXU",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "hidden",
+                                "background": {
+                                  "r": 255,
+                                  "g": 255,
+                                  "b": 255,
+                                  "a": 1,
+                                  "h": 0,
+                                  "s": 0,
+                                  "l": 1,
+                                  "initialValue": "white",
+                                  "roundA": 1,
+                                  "format": "rgb"
+                                },
+                                "left": 950,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 18,
+                                "height": 200,
+                                "aspectRatio": null,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "OXACw8y0k",
+                                "id": "id_OXACw8y0k",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "yUWFoVYtn4QlzEYrgByxDLPBjC0.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 975,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Crq__9fPN",
+                                "id": "id_Crq__9fPN",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "NOprsKcL2ISrkb3Jk6ffXzGUc4c.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1262,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "0%",
+                                "centerY": "0%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Rseo8gleJ",
+                                "id": "id_Rseo8gleJ",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "7igGzOv2wPQmPMA0KhLP2Pm5U2I.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1549,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "84.64285714285714%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "H8ZjTOEEb",
+                                "id": "id_H8ZjTOEEb",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "DGXUck4UEjT759h4uFb2W7fD9M.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 1836,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "102.85714285714285%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            },
+                            {
+                              "componentClass": "Frame",
+                              "props": {
+                                "key": "Rf7iprtIs",
+                                "id": "id_Rf7iprtIs",
+                                "willChangeTransform": false,
+                                "opacity": 1,
+                                "radius": 0,
+                                "rotation": 0,
+                                "visible": true,
+                                "overflow": "visible",
+                                "background": {
+                                  "src": "0P2OztyWoIx6tN0J2m92cJumM.png",
+                                  "pixelWidth": 560,
+                                  "pixelHeight": 400,
+                                  "intrinsicWidth": 280,
+                                  "intrinsicHeight": 200,
+                                  "fit": "fill"
+                                },
+                                "left": 2123,
+                                "right": null,
+                                "top": 940,
+                                "bottom": null,
+                                "width": 280,
+                                "height": 200,
+                                "aspectRatio": 1.4,
+                                "centerX": "58.57142857142858%",
+                                "centerY": "50%",
+                                "parentSize": null
+                              },
+                              "children": []
+                            }
+                          ],
+                          "id": "vNoLIhdLzframer/Page",
+                          "key": "vNoLIhdLzframer/Page"
+                        },
+                        "children": [
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "evQJ74lXU",
+                              "id": "id_evQJ74lXU",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "hidden",
+                              "background": {
+                                "r": 255,
+                                "g": 255,
+                                "b": 255,
+                                "a": 1,
+                                "h": 0,
+                                "s": 0,
+                                "l": 1,
+                                "initialValue": "white",
+                                "roundA": 1,
+                                "format": "rgb"
+                              },
+                              "left": 950,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 18,
+                              "height": 200,
+                              "aspectRatio": null,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "OXACw8y0k",
+                              "id": "id_OXACw8y0k",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "yUWFoVYtn4QlzEYrgByxDLPBjC0.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 400,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 200,
+                                "fit": "fill"
+                              },
+                              "left": 975,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 200,
+                              "aspectRatio": 1.4,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "Crq__9fPN",
+                              "id": "id_Crq__9fPN",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "NOprsKcL2ISrkb3Jk6ffXzGUc4c.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 400,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 200,
+                                "fit": "fill"
+                              },
+                              "left": 1262,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 200,
+                              "aspectRatio": 1.4,
+                              "centerX": "0%",
+                              "centerY": "0%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "Rseo8gleJ",
+                              "id": "id_Rseo8gleJ",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "7igGzOv2wPQmPMA0KhLP2Pm5U2I.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 400,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 200,
+                                "fit": "fill"
+                              },
+                              "left": 1549,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 200,
+                              "aspectRatio": 1.4,
+                              "centerX": "84.64285714285714%",
+                              "centerY": "50%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "H8ZjTOEEb",
+                              "id": "id_H8ZjTOEEb",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "DGXUck4UEjT759h4uFb2W7fD9M.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 400,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 200,
+                                "fit": "fill"
+                              },
+                              "left": 1836,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 200,
+                              "aspectRatio": 1.4,
+                              "centerX": "102.85714285714285%",
+                              "centerY": "50%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          },
+                          {
+                            "componentClass": "Frame",
+                            "props": {
+                              "key": "Rf7iprtIs",
+                              "id": "id_Rf7iprtIs",
+                              "willChangeTransform": false,
+                              "opacity": 1,
+                              "radius": 0,
+                              "rotation": 0,
+                              "visible": true,
+                              "overflow": "visible",
+                              "background": {
+                                "src": "0P2OztyWoIx6tN0J2m92cJumM.png",
+                                "pixelWidth": 560,
+                                "pixelHeight": 400,
+                                "intrinsicWidth": 280,
+                                "intrinsicHeight": 200,
+                                "fit": "fill"
+                              },
+                              "left": 2123,
+                              "right": null,
+                              "top": 940,
+                              "bottom": null,
+                              "width": 280,
+                              "height": 200,
+                              "aspectRatio": 1.4,
+                              "centerX": "58.57142857142858%",
+                              "centerY": "50%",
+                              "parentSize": null
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "MgwQPpVBU",
+          "id": "id_MgwQPpVBU",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 0,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "src": "7rLzifiJ0ZeTxKCCrUa8YrmFs4.png",
+            "pixelWidth": 750,
+            "pixelHeight": 96,
+            "intrinsicWidth": 375,
+            "intrinsicHeight": 48,
+            "fit": "fill"
+          },
+          "left": 0,
+          "right": 0,
+          "top": null,
+          "bottom": 0,
+          "width": 375,
+          "height": 48,
+          "aspectRatio": 7.8125,
+          "centerX": "50%",
+          "centerY": "96.40179910044976%",
+          "parentSize": null
+        },
+        "children": []
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "CI2fxz__s",
+          "id": "id_CI2fxz__s",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 0,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "src": "xyQQ7SUUmVkO8D3fjtAWeh1wY6Q.png",
+            "pixelWidth": 750,
+            "pixelHeight": 88,
+            "intrinsicWidth": 375,
+            "intrinsicHeight": 44,
+            "fit": "fill"
+          },
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": null,
+          "width": 375,
+          "height": 44,
+          "aspectRatio": 8.522727272727273,
+          "centerX": "50%",
+          "centerY": "3.2983508245877062%",
+          "parentSize": null
+        },
+        "children": []
+      }
+    ]
+  },
+  "metadata": {
+    "name": "Home",
+    "id": "iVYn4E2cH",
+    "width": 375,
+    "height": 667,
+    "settings": {
+      "deviceType": "framer/FramerAppleIPhone8",
+      "deviceDescriptor": {
+        "hands": {
+          "Hand 1": {
+            "package": "@framer/framer.device-hand-iphone-1"
+          },
+          "Hand 2": {
+            "package": "@framer/framer.device-hand-iphone-2"
+          }
+        },
+        "pixelRatio": 2,
+        "canRotate": true,
+        "screen": {
+          "width": 750,
+          "height": 1334
+        },
+        "kind": "phone",
+        "skins": {
+          "Space Gray": {
+            "package": "@framer/framer.device-skin-apple-iphone8-space-gray"
+          },
+          "Silver": {
+            "package": "@framer/framer.device-skin-apple-iphone8-silver"
+          },
+          "Gold": {
+            "package": "@framer/framer.device-skin-apple-iphone8-gold"
+          }
+        },
+        "title": "Framer Bezel Apple iPhone 8",
+        "category": "Framer Bezel",
+        "selector": "Apple iPhone 8"
+      },
+      "zoom": -1,
+      "rotate": false,
+      "bezel": false,
+      "responsive": false,
+      "touch": true,
+      "__class": "PreviewSettings"
+    }
+  },
+  "navigation": {}
+};
+        const $build_index_js = document.querySelector("#build_index_js")
+        const script = $build_index_js ? $build_index_js.textContent.trim() : ""
+        
+        // need react to have rendered, before we can do setPreviewData
+        setTimeout(() => {
+            if (script.length > 0) {
+                setPreviewData(script, data)
+            } else {
+                fetch("build/index.js").then((response) => {
+                    return response.text().then((script) => {
+                        setPreviewData(script, data)
+                    })
+                })
+            }
+        }, 0)
+        </script>
+    </body>
+</html>
