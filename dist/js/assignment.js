@@ -32,14 +32,6 @@ var scheduleDay2 = new Vue({
   }
 })
 
-
-
-
-
-
-
-
-
 Vue.component('edit-schedule', {
   template: '<div> Hello!</div>',
   // props: ['name'],
@@ -47,12 +39,8 @@ Vue.component('edit-schedule', {
   // props: ['name'],
 });
 
-
-
-
-// 現在很多都會自動save
-// github? unsplash
-$("button.btn-settings__edit").click(function() {
+// auto save?
+$("button.btn-settings__edit--auto").click(function() {
   // $('.edit-panel').toggleClass("is-active");
   $('.timeline-journey__spot__edit-panel').fadeToggle("fast");
   $('.content::before').fadeToggle("fast");
@@ -61,40 +49,3 @@ $("button.btn-settings__edit").click(function() {
     $(".btn-text").text(($(".btn-text").text() == 'Save') ? 'Edit' : 'Save').fadeIn("fast");
   })
 });
-
-
-
-
-
-
-
-
-
-// scroll to fixed
-$(document).ready(function() {
-  $('.timeline-journey__picker-group').scrollToFixed();
-
-
-
-  var summaries = $('.summary');
-  summaries.each(function(i) {
-      var summary = $(summaries[i]);
-      var next = summaries[i + 1];
-
-      summary.scrollToFixed({
-          marginTop: $('.timeline-journey__picker').outerHeight(true),
-          limit: function() {
-              var limit = 0;
-              if (next) {
-                  limit = $(next).offset().top - $(this).outerHeight(true);
-              } else {
-                  limit = $('.footer').offset().top - $(this).outerHeight(true);
-              }
-              return limit;
-          },
-          zIndex: 999
-      });
-  });
-});
-
-
