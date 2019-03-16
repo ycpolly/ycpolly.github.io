@@ -45,7 +45,7 @@ $("button.btn-settings__edit--auto").click(function() {
   $('.timeline-journey__spot__edit-panel').fadeToggle("fast");
   $('.content::before').fadeToggle("fast");
 
-  $(".btn-text").fadeOut(function () {
-    $(".btn-text").text(($(".btn-text").text() == 'Save') ? 'Edit' : 'Save').fadeIn("fast");
+  $(".btn-text--auto").fadeOut(function () {
+    $(".btn-text--auto").text(($(".btn-text--auto").text() == 'Save') ? 'Edit' : 'Save').fadeIn("fast");
   })
 });
