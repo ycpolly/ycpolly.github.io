@@ -1,5 +1,10 @@
 .sass-cache/
+dist/css/vt.min.css
+dist/css/vt.min.css.map
 dist/js/common.js
 dist/js/detailpage.js
+dist/js/spots.json
+dist/js/vt.js
 sass/
 work/font.html
+vt/
